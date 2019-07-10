@@ -35,7 +35,8 @@ public class App {
 		System.out.println(response.getStatusLine().getStatusCode());
 		//System.out.println(response.toString());
 		System.out.println(response.getEntity().getContent().toString());
-
+		System.out.println("bandham");
+		System.out.println("revert");
 	}
 
 	public void someMethod() throws URISyntaxException {
