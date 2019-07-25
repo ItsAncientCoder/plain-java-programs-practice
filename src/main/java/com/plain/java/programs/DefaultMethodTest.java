@@ -3,13 +3,13 @@ package com.plain.java.programs;
 @FunctionalInterface
 public interface DefaultMethodTest {
 
-	public abstract void normal();
+	public abstract void normalMethod();
 	
-	public default void defaul() {
+	public default void defaultMethod() {
 		System.out.println("Default method original implementation.");
 	}
 	
-	public static void stat() {
+	public static void staticMethod() {
 		System.out.println("Original Static method implementation");
 	}
 }
@@ -17,14 +17,14 @@ public interface DefaultMethodTest {
 class DefaultMethodTestImpl implements DefaultMethodTest{
 
 	@Override
-	public void normal() {
+	public void normalMethod() {
 		// TODO Auto-generated method stub
 	}
 	
 	public static void main(String[] args) {
 		DefaultMethodTestImpl d = new DefaultMethodTestImpl();
-		d.defaul();
-		DefaultMethodTest.stat();
+		d.defaultMethod();
+		DefaultMethodTest.staticMethod();
 		
 //		new DefaultMethodTest( ()-> {
 //			System.out.println("test");
@@ -37,8 +37,8 @@ class DefaultMethodTestImpl implements DefaultMethodTest{
 	}
 	
 	@Override
-	public void defaul() {
-		DefaultMethodTest.super.defaul();
+	public void defaultMethod() {
+		DefaultMethodTest.super.defaultMethod();
 		System.out.println("Default method implementation.");
 	}
 	
