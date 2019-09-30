@@ -53,7 +53,8 @@ public class RegexSpecialCharacters {
 		String patt1 = "[a-zA-Z0-9\\- \\s.,:()\\'\";>{}\\[\\]!?\\*\\/\\#_`]";
 		// String patt = "[^a-zA-Z0-9\\- \\s]";
 		Pattern pattern = Pattern.compile(patt);
-		String specialChar = "ß";
+		String specialChar = "banßdham";
+		String tChar = "\u00df";
 		String myString = "bandham- 0-9";
 		String test = "Desde nueva sangría ";
 		String regex = "àèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêîôûÂÊÎÔÛãñõÃÑÕäëïöüÿÄËÏÖÜŸçÇßØøÅåÆæœ";
@@ -61,7 +62,10 @@ public class RegexSpecialCharacters {
 		String filtered = Normalizer.normalize(regex, Form.NFKD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
 		// System.out.println(pattern.matcher(myString).find());
 
-		System.out.println(getText().replaceAll(patt1, ""));
+		String res = specialChar.replaceAll(tChar, "");
+		System.out.println(res);
+
+		// System.out.println(getText().replaceAll(patt1, ""));
 
 		/*
 		 * if (true) { long startTime1 = System.currentTimeMillis(); for (int i = 0; i <
