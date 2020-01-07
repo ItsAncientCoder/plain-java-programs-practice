@@ -45,5 +45,6 @@ public class SteamApiDemo {
 		Path path = Paths.get("C:\\Users\\ac29019\\Desktop\\FILES_TO_TAKE_BACKUP.txt");
 		Stream<String> streamWithCharset = Files.lines(path, Charset.forName("UTF-8"));
 		System.out.println(streamWithCharset.collect(Collectors.toList()));
+		streamWithCharset.close();
 	}
 }

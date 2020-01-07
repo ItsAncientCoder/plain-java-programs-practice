@@ -29,12 +29,12 @@ public class MethodReferenceIntroDemo {
 
 class Person {
 
+	private String birthDay;
+	private String name;
+	
 	public static int comparebyDay(Person a, Person b) {
 		return a.getBirthDay().compareTo(b.getBirthDay());
 	}
-
-	private String birthDay;
-	private String name;
 
 	Person(String name, String birthDay) {
 		this.birthDay = birthDay;
